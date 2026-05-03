@@ -1,0 +1,32 @@
+.all{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh; /*высота всего окна браузера */
+}
+
+.header {
+  height: 7.5vh;
+  /* Возможно лучше фиксированное значение? */
+  display: flex; /* применяем flex-контейнер */
+  align-items: center; /* центрируем содержимое по вертикали */
+  background: #1F2023;
+  font-family: 'urwgothicl_demi' monospace;
+}
+
+.components{
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background-image: url(background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  font-family: 'urwgothicl_demi';
+}
+
+.left_side {
+  height: 100%;
+  width: 100vw;
+  position: relative;
+}

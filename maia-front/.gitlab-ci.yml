@@ -1,0 +1,26 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  GIT_STRATEGY: clone
+
+stages:
+  - s3
+
+before_script:
+  - env
+
+sync_static:
+  image: panubo/s3fs
+  stage: s3
+  variables:
+    AWS_S3_URL: https://storage.yandexcloud.net
+    AWS_STORAGE_BUCKET_NAME: $MAIA_FRONT_BACKET
+    AWS_ACCESS_KEY_ID: $MAIA_FRONT_S3_ID
+    AWS_SECRET_ACCESS_KEY: $MAIA_FRONT_S3_KEY
+  script:
+    - ls -lah /mnt/
+    - apt update && apt -y install rsync
+    - df -h
+    - rsync -zrahPIq --no-perms --no-owner --no-group --no-times --exclude={'deploy','.idea','.git','.gitlab-ci.yml'} --delete --force $CI_PROJECT_DIR/ /mnt/ --temp-dir=/tmp && ls -lah /mnt/
+  tags:
+    - s3
+  when: manual

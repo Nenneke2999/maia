@@ -34,14 +34,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.idea
-__pycache__
-*.exe
-*.txt
+node_modules/
+dist/
 
-backend/models
-*.bin
-*.meta
-*.out
-*.log
-*.gz
+.next
+.vscode
+.idea

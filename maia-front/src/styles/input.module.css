@@ -1,0 +1,49 @@
+.input_mes {
+  border: 0;
+  outline: none;
+  padding-left: 2vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 74.3vw;
+}
+
+.input_mes form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.input_mes input {
+  flex: 1;
+  height: 4vw;
+  background: #3F4047;
+}
+.input_mes ::placeholder{
+  color:#777986;
+}
+.input_mes :focus{
+  background: #4F5059;
+}
+
+.input_mes button {
+  margin-left: 5px;
+}
+
+.text{
+  color:#FEFDFB;
+  font-size: 1.25vw;
+  padding: 0vw;
+  padding-left: 1vw;
+}
+
+.svg_button{
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  cursor: pointer;
+  height: 6.5vh;
+  width: 3vw;
+}
+.svg_button:hover {
+  filter: brightness(1.3);
+}

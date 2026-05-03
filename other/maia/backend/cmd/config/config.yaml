@@ -1,0 +1,24 @@
+app:
+  name: 'coffee-prompt'
+  version: '1.0.0'
+
+logger:
+  log_level: 'debug'
+
+server:
+  host: '10.129.0.24'
+  port: 4000
+
+database:
+  host: '127.0.0.1'
+  port: 5432
+  name: 'prompts'
+  user: 'postgres'
+  password: 'admin'
+
+object_storage:
+  bucket: 'cf-backet'
+
+model:
+  host: '127.0.0.1'
+  port: 6767

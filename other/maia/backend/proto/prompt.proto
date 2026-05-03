@@ -1,0 +1,26 @@
+syntax = "proto3";
+package pb;
+
+option go_package = "./pb";
+
+service PromptService {
+  rpc GetPrompt(GetPromptRequest) returns (GetPromptResponse);
+  rpc CorrectInternalPrompt(CorrectInternalPromptRequest) returns (CorrectInternalPromptResponse);
+}
+
+message GetPromptRequest {
+  string text = 1;
+}
+
+message CorrectInternalPromptRequest {
+  string internal_prompt = 1;
+  int32 model_number = 2;
+}
+
+message GetPromptResponse {
+  string prompt = 1;
+}
+
+message CorrectInternalPromptResponse {
+  string prompt = 1;
+}

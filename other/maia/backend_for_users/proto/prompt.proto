@@ -1,0 +1,16 @@
+syntax = "proto3";
+package pb;
+
+option go_package = "./pb";
+
+service PromptService {
+  rpc GetPrompt(GetPromptRequest) returns (GetPromptResponse);
+}
+
+message GetPromptRequest {
+  string text = 1;
+}
+
+message GetPromptResponse {
+  string prompt = 1;
+}

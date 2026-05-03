@@ -1,0 +1,10 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[user]
+	email = denissamatov470@gmail.com
+	name = denissamatov470
+[http]
+	sslBackend = gnutls

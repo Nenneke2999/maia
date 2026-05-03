@@ -1,0 +1,58 @@
+.all{
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  height: 0vh;
+}
+
+.header {
+  height: 7.3vh;
+  /* Возможно лучше фиксированное значение? */
+  display: flex; /* применяем flex-контейнер */
+  align-items: center; /* центрируем содержимое по вертикали */
+  background: #1F2023;
+  border-bottom: 1px solid #777986;
+}
+
+.components{
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+
+.left_side {
+    /* flex: 0 0 100px; */
+    /* height: 100%; */
+    /* overflow: auto; */
+    /* overflow: hidden; */
+    position: relative;
+  }
+
+  /* .left_side::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100vh;
+    z-index: 1;
+  } */
+
+.right_side {
+    flex: 1 1 auto; /* динамическая ширина для окна справа */
+    display: flex;
+    flex-direction: column;
+    height: 92.58vh;
+    max-height: 92.575vh;
+    max-width: 77vw;
+    /* overflow: hidden; */
+    position: relative;
+    background-color: #2F3035;
+    border-left: 1px solid #777986;
+}
+
+.top {
+    max-height: 82vh; /* убрать */
+    height: 82vh;
+}
