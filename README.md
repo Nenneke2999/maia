@@ -1,40 +1,93 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **MAIA**
 
-## Getting Started
+<div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 16px 0;">
+  <img src="https://img.shields.io/badge/Next.js-14-black?style=flat&logo=nextdotjs" alt="Next.js" height="20" />
+  <img src="https://img.shields.io/badge/React-18-61dafb?style=flat&logo=react" alt="React" height="20" />
+  <img src="https://img.shields.io/badge/Tailwind-3-38b2ac?style=flat&logo=tailwindcss" alt="Tailwind" height="20" />
+  <img src="https://img.shields.io/badge/JS-ES2022-f7df1e?style=flat&logo=javascript" alt="JavaScript" height="20" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License" height="20" />
+</div>
 
-First, run the development server:
+Фронтенд-часть проекта Maia — веб-интерфейс, построенный на Next.js (React). Репозиторий представляет собой монорепозиторий, содержащий как клиентскую часть (разработанную мной), так и серверные компоненты (разработанные другими участниками команды).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Ключевые фичи
+
+| 🛠 Функция | 💻 Технологии |
+|---|---|
+| 🚀 **SSR/SSG роутинг** | Next.js Pages Router |
+| 🎨 **Адаптивный дизайн** | Tailwind CSS + mobile-first |
+| 🌓 **Тёмная тема** | CSS-variables + localStorage |
+| 🧩 **Переиспользуемые компоненты** | React Components + props |
+| 🧪 **Линтинг и форматирование** | ESLint + Prettier |
+
+## 📂 Структура проекта
+
+```text
+maia-frontend/
+├── 📁 public/                    # Статические ресурсы
+│   ├── 📁 images/                # Иконки, плейсхолдеры, иллюстрации
+│   └── 📄 favicon.ico
+├── 📁 src/
+│   ├── 📁 components/            # UI-компоненты
+│   │   ├── 📁 ui/                # Базовые элементы (Button, Card, Input)
+│   │   ├── 📁 medical/           # Медицинские компоненты
+│   │   │   ├── MedicalImageViewer.jsx  # Отображение снимка с зумом
+│   │   │   ├── AnnotationOverlay.jsx   # Оверлей для bounding boxes
+│   │   │   └── PredictionCard.jsx      # Карточка результата модели
+│   │   └── 📁 layout/            # Header, Footer, Sidebar, Container
+│   ├── 📁 pages/                 # Страницы (роутинг Next.js)
+│   │   ├── 📄 index.js           # Лендинг с описанием платформы
+│   │   ├── 📄 upload.js          # Страница загрузки изображений
+│   │   ├── 📄 results/[id].js    # Динамическая страница результатов
+│   │   └── 📁 api/               # API-роуты (serverless)
+│   ├── 📁 styles/                # Стили
+│   │   ├── 📄 globals.css        # Tailwind imports + кастомные утилиты
+│   │   └── 📄 theme.js           # Конфигурация цветовой палитры
+│   ├── 📁 utils/                 # Утилиты
+│   │   ├── 📄 api.js             # Функции для запросов к backend
+│   │   ├── 📄 image.js           # Обработка изображений на клиенте
+│   │   └── 📄 constants.js       # Глобальные константы и конфиги
+│   └── 📁 hooks/                 # Кастомные хуки
+│       └── 📄 usePrediction.js   # Хук для управления состоянием предсказаний
+├── 📄 next.config.js             # Конфигурация Next.js
+├── 📄 tailwind.config.js         # Настройка дизайн-системы
+├── 📄 package.json               # Зависимости и скрипты
+├── 📄 .eslintrc.json             # Правила линтинга
+└── 📄 README.md                  # Документация проекта
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Стек и инструменты
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+| 📦 Категория | 💻 Технологии |
+|---|---|
+| **Фреймворк** | Next.js 14 (Pages Router) |
+| **UI-библиотека** | React 18 + Hooks |
+| **Стилизация** | Tailwind CSS 3 |
+| **Шрифты** | next/font (Inter) |
+| **Линтинг** | ESLint + Prettier |
+| **Сборка** | Webpack (встроен в Next.js) |
+| **Деплой** | Vercel |
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🚀 Как запустить
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### **Требования**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Node.js ≥ 18.x
+- npm / yarn / pnpm
 
-## Learn More
+### Установка
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# 1. Клонируйте репозиторий
+git clone https://github.com/Nenneke2999/maia.git
+cd maia
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 2. Установите зависимости
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# 3. Запустите сервер разработки
+npm run dev
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# 4. Откройте в браузере
+👉 http://localhost:3000
+```
